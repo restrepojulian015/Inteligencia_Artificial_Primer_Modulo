@@ -26,4 +26,4 @@ except ValueError as error :
 except Exception as error :
     print(f'Error inesperado: {error}')
 finally :
-    print('Fin de la operación')
+    print('Fin del ejercico')
