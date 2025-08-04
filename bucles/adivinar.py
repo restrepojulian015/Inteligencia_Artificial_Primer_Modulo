@@ -4,6 +4,7 @@
 try :
     
     numeroSecreto = 7
+    intentos = 0
 
     #Bucle while
     while True :
@@ -14,6 +15,7 @@ try :
             break
         else :
             print("Incorrecto")
+            intentos += 1
 
 except ValueError as error :
     print(f'Error : {error}')
@@ -21,3 +23,4 @@ except Exception as error :
     print(f'Error inesperado : {error}')
 finally :
     print('Fin de la ejecución')
+    print(f'Intentos : {intentos}')
