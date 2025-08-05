@@ -56,6 +56,9 @@ try :
         for i in estudiante_objetivo["cursos"] :
             promedio += i[1]
         promedio/= len(estudiante_objetivo["cursos"])
+        print(f'Cursos de {estudiante_objetivo["nombre"]}\n')
+        for curso,nota in estudiante_objetivo["cursos"] :
+            print(f'curso  {curso} - nota : {nota}\n')
         print(f'El promedio del estudiante {id_estudiante} es : {promedio}')
     else :
         print(f'Error : No se encontro el estudiante con el ID {id_estudiante}')
