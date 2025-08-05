@@ -63,6 +63,26 @@ try :
     else :
         print(f'Error : No se encontro el estudiante con el ID {id_estudiante}')
 
+    #Agregar un curso a un estudiante
+    while True :
+
+        opcion = input("Desea Agregar otro curso? (SI/NO): ").lower()
+        if opcion == 'si' :
+            curso = input("Ingrese el nombre del curso:").lower()
+            nota = int(input("Ingrese la nota del curso: "))
+
+            if curso in estudiante_objetivo["cursos"] :
+                print(("Error: El curso ya existe"))
+            elif len(curso) < 4 :
+                print("Error: El nombre del curso debe tener al menos 4 caracteres")
+            elif nota < 0 or nota > 100 :
+                print("Error : La nota debe estar entre 0 y 100")
+            elif (nota > 0 and nota <100) and len(curso) >= 4 :
+                estudiante_objetivo["cursos"].append((curso,nota))
+                print("Curso agregado Exitosamente")
+        else :
+            break       
+
 except ValueError as error :
     print(f'Error : {error}')
 except KeyError as error :
